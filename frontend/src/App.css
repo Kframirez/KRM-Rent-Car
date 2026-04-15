@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Fondo y Paneles */
+  --bg-main: #F7F5F0;    
+  --bg-panel: #FFFDF8;  
+  --bg-elevated: #F1ECE3; 
+  --border-soft: #DDD4C7; 
+
+  /* Textos */
+  --text-main: #3E352C;    
+  --text-secondary: #6F655A;
+  --text-muted: #9A9084;    
+
+  /* Acentos y Estados */
+  --accent-gold: #C9A646;    
+  --accent-sage: #8FA68E;    
+  --accent-blue: #8EA3B5;   
+  --accent-terra: #C98B73;  
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-sora {
+  font-family: 'Sora', sans-serif;
+  letter-spacing: -0.02em;
+}

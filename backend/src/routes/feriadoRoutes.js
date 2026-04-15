@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const feriadoController = require('../controllers/feriadoController');
+const verificarToken = require('../middlewares/authMiddleware');
+const tienePermiso = require('../middlewares/checkPermission'); 
+router.get('/', verificarToken, feriadoController.listarFeriados);
+router.post('/', verificarToken, feriadoController.crearFeriado);
+router.delete('/:id', verificarToken, feriadoController.eliminarFeriado);
+router.get('/', verificarToken, feriadoController.listarFeriados);
+router.post('/', verificarToken, tienePermiso('Configurar precios'), feriadoController.crearFeriado);
+router.delete('/:id', verificarToken, tienePermiso('Configurar precios'), feriadoController.eliminarFeriado);
+module.exports = router;  
