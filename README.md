@@ -2,18 +2,18 @@
 
 Sistema web para la gestion de alquiler de vehiculos.
 
-La idea de este proyecto es cubrir el flujo completo de una rent car: clientes, vehiculos, alquileres, pagos, devoluciones, reportes y seguridad de usuarios. Esta version esta dividida en dos partes:
+Este proyecto busca cubrir el flujo completo de una empresa rent car: clientes, vehiculos, alquileres, pagos, devoluciones, reportes y seguridad de usuarios. Esta dividido en dos partes principales:
 
-- `frontend`: interfaz en React + Vite
-- `backend`: API en Node.js + Express + MySQL
+- `frontend`: interfaz desarrollada con React + Vite
+- `backend`: API desarrollada con Node.js + Express + MySQL
 
-## Que incluye
+## Funcionalidades principales
 
 - Inicio de sesion con JWT
 - Gestion de clientes
 - Gestion de vehiculos
 - Registro de alquileres, pagos y devoluciones
-- Reportes y consultas
+- Consultas y reportes
 - Seguridad por usuarios, roles y permisos
 
 ## Tecnologias usadas
@@ -26,26 +26,26 @@ La idea de este proyecto es cubrir el flujo completo de una rent car: clientes, 
 - MySQL
 - Sequelize
 
-## Antes de empezar
+## Requisitos
 
-Necesitas tener instalado:
+Antes de empezar, necesitas tener instalado:
 
 - Node.js
 - MySQL
 - Git
 
-## Como correr el proyecto
+## Como ejecutar el proyecto
 
-### 1. Clona el repositorio
+### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU-USUARIO/TU-REPO.git
+git clone https://github.com/TU-USUARIO/krm-rent-car.git
 cd krm-rent-car
 ```
 
-### 2. Configura el backend
+### 2. Configurar el backend
 
-En la carpeta `backend`, crea tu archivo `.env` tomando como referencia `backend/.env.example`.
+Dentro de `backend`, crea un archivo `.env` tomando como referencia `backend/.env.example`.
 
 Ejemplo:
 
@@ -62,7 +62,7 @@ CORS_ORIGIN=http://localhost:5173
 SEED_ADMIN_PASSWORD=
 ```
 
-Instala dependencias y levanta el servidor:
+Luego instala dependencias y levanta el servidor:
 
 ```bash
 cd backend
@@ -70,30 +70,28 @@ npm install
 npm run dev
 ```
 
-### 3. Configura la base de datos
+### 3. Configurar la base de datos
 
-Dentro de `backend/database` tienes los archivos base:
+Dentro de `backend/database` estan los archivos base:
 
 - `schema.sql`: crea la estructura de la base de datos
 - `seed-core.sql`: carga datos base del sistema
 
 Orden recomendado:
 
-```text
-1. Crear la base de datos krm_rent_car
-2. Ejecutar schema.sql
-3. Ejecutar seed-core.sql
+1. Crear la base de datos `krm_rent_car`
+2. Ejecutar `schema.sql`
+3. Ejecutar `seed-core.sql`
 4. Crear tu usuario administrador con una clave segura
-```
 
-Si quieres regenerar esos archivos desde tu base local:
+Si necesitas regenerar esos archivos desde tu base local:
 
 ```bash
 cd backend
 npm run db:export
 ```
 
-### 4. Levanta el frontend
+### 4. Levantar el frontend
 
 ```bash
 cd frontend
@@ -101,15 +99,15 @@ npm install
 npm run dev
 ```
 
-Por defecto, el frontend corre en:
+El frontend corre por defecto en:
 
 ```text
 http://localhost:5173
 ```
 
-## Seguridad del repo
+## Seguridad del repositorio
 
-Para evitar problemas al subir esto a GitHub, el proyecto ya ignora:
+Para evitar problemas al publicar el proyecto en GitHub, el repositorio ignora automaticamente:
 
 - `node_modules`
 - `frontend/dist`
@@ -117,9 +115,7 @@ Para evitar problemas al subir esto a GitHub, el proyecto ya ignora:
 - `backend/uploads`
 - certificados, llaves y archivos temporales
 
-Eso significa que puedes publicar el repo sin arrastrar dependencias instaladas ni secretos locales.
-
-## Que si va al repo
+## Que si se sube al repo
 
 - Codigo fuente del frontend y backend
 - Archivos SQL base
@@ -137,7 +133,7 @@ Eso significa que puedes publicar el repo sin arrastrar dependencias instaladas 
 
 ## Estado del proyecto
 
-Este proyecto esta pensado como base funcional para una aplicacion de rent car. Todavia se puede mejorar en varias cosas, pero ya tiene una estructura bastante buena para seguir creciendo, organizarlo mejor y publicarlo de forma limpia.
+Este proyecto sirve como base funcional para una aplicacion de rent car. Todavia tiene espacio para mejoras, pero ya cuenta con una estructura bastante buena para seguir creciendo, organizarse mejor y publicarse de forma limpia.
 
 ## Autor
 
